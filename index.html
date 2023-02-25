@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Report a Crime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <h1>Report a Crime</h1>
+    <form action="submit_crime_report.php" method="POST" enctype="multipart/form-data">
+      <label for="crime_type">Type of Crime:</label>
+      <select id="crime_type" name="crime_type">
+        <option value="Assault">Assault</option>
+        <option value="Burglary">Burglary</option>
+        <option value="Drug Offense">Drug Offense</option>
+        <option value="Fraud">Fraud</option>
+        <option value="Homicide">Homicide</option>
+        <option value="Robbery">Robbery</option>
+        <option value="Theft">Theft</option>
+        <option value="Vandalism">Vandalism</option>
+      </select><br>
+
+      <label for="description" >Description:</label><br>
+      <textarea id="description" name="description" rows="5" cols="50" placeholder="More details here..."></textarea><br>
+
+      <label for="longitude">Longitude:</label>
+      <input type="text" id="longitude" name="longitude" required><br>
+
+      <label for="latitude">Latitude:</label>
+      <input type="text" id="latitude" name="latitude" required><br>
+
+      <label for="attachment">Attachment:</label>
+      <input type="file" id="attachment" name="attachment"><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  </body>
+</html>
+
